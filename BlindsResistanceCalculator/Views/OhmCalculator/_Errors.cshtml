@@ -1,0 +1,14 @@
+﻿@model System.Web.Mvc.ModelStateDictionary
+
+<div class="container">
+    <h4>Errors:</h4>
+    <ul class="list-unstyled">
+        @foreach (var item in Model.Values)
+        {
+            foreach (var error in item.Errors)
+            {
+                <li class="text-danger">@error.ErrorMessage</li>
+            }
+        }
+    </ul>
+</div>
